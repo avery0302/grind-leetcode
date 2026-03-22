@@ -51,11 +51,11 @@ var findMedianSortedArrays = function (nums1, nums2) {
  所以直接两个指针,从两个数组中从小到大拿值
  so we use two pointers to get values from the two arrays in sorted order
  代码:数组个数为奇数和偶数时中位数计算方式不同
- code: the calculation of the median is different when the length of the array is odd or even
+ code: the median calculation is different when the total length is odd or even
  奇数只需要一个中间元素,偶数需要两个
  an odd-length array has one middle element, while an even-length array has two
  遍历次数是数组一半的长度
- the number of iterations is half the length of the array
+ the number of iterations is half the total length
  每次遍历要找到两个数组中较小的数值并移动指针
  find the smaller value between the two arrays and move the pointers in each iteration
  奇数直接返回中间的值,偶数返回中间两个值的平均值
