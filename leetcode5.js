@@ -36,9 +36,9 @@ var longestPalindrome = function (s) {
  但是中心可能是一个字符也可能是两个字符,所以分情况讨论
  but the center may be one character or two, so we need an if condition
  代码: 唯一确定子串需要两个指针
- code: finding a substring needs two pointers
+ code: finding a substring requests two pointers
  遍历整个字符串作为子串的中心
- iterate through the whole string to get the center of the substring
+ iterate through the whole string and use each position as the center
  新建方法,中心为一个字符和中心为两个字符时传入不同参数
  create a function, and pass different parameters when the center is one character or two
  从中心向两边膨胀,设置终止条件
