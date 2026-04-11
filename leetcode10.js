@@ -32,16 +32,29 @@ var isMatch = function (s, p) {
 };
 /**
  * leetcode第10题:正则表达式匹配
+ * the tenth problem on leetcode:regular expression matching
  * 思路:两个字符串互相匹配,首先要想到双指针
+ * approach: when you match two strings correspondingly, consider two pointers first
  * 但是双指针前进是需要条件判断的
+ * but moving the pointers depends on a doable condition
  * 本题中星号可以匹配任意数量的字符,导致没有准确的条件来让指针前进
+ * in this problem, the star mark can match any amount of characters, meaning that no clear signal to move the pointer
  * 所以进一步考虑动态规划,前进和不前进的状态都记录下来
+ * so reconsider dynamic programming, and save the status whether the pointer moves
  * 代码:返回结果是DP二维表的最后一个元素,代表两个字符串的指针都走到最后一位的匹配状态
+ * code: the returned result is the last element in DP two-dimension table, which means the matching status when the two pointers of the two strings iterate to the end
  * 二维表需要额外增加抽象的首行和首列,来比较两个字符串都为空时的匹配状态
+ * the 2D table needs to add extra first row and first column, to compare the matching status when both of the strings are empty
  * DP二维表的值要分为三部份填充,分为是DP零零,首行首列,和其余部份
+ * the DP 2D table's values are filled in by three parts, which are DP[0][0], first row and column and the rest
  * 用具体的字符串举例,通过填充规律来推断状态转移方程
+ * make some examples with the specific strings, declude the equation from the pattern of filling
  * 务必要列出所有可能的情况
+ * make sure to list all the possible condition
  * 这就是全部代码
+ * so this is the complete code
  * 看一下结果
+ * take a look at the result
  * 完成
+ * done
  */
