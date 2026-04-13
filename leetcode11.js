@@ -27,9 +27,9 @@ var maxArea = function (height) {
  * 第一想法是二重循环,比较所有情况的面积大小
  * the first idea is to use the nested loop, then compare the area of all the conditions
  * 为了降低时间复杂度,可以让两个指针从两端开始
- * in order to reduce the time complexity, make the two pointers start from the two end
+ * in order to reduce the time complexity, start the two pointers from the two end
  * 前进的指针是高度更小的那个,因为宽度已经减少,高度必须增加才有可能找到更大的面积
- * make the lower-height pointer move forward, since the width has become smaller, it's only possible to find a larger area when increasing the height
+ * move the lower-height pointer forward, since the width has become smaller, it's necessary to increase the height to find a larger area
  * 代码:返回的结果是最大面积
  * code: the result is max area
  * 遍历高度数组,终止条件是左右指针相遇
