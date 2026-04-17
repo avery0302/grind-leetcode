@@ -48,25 +48,25 @@ var threeSum = function (nums) {
  * 思路: 这道题要求找出数组中所有和为0的三元组
  * approach: this problem requires finding all triplets adding up to 0 in the array
  * 首先想到三重循环,三个指针能遍历所有三元组情况
- * the first idea is triple nested loops, since three pointers can iterate over all possible triplets
+ * the first idea is three nested loops, since three pointers can iterate over all possible triplets
  * 为了降低时间复杂度,可以让第二个和第三个指针相对而行
  * in order to decrease the time complexity, we can move the second and third pointers towards each other
  * 为了拥有前进条件,数组必须是有序的
- * in order to have a condition to move forward, the array must be sorted
+ * to have a valid condition for moving the pointers, the array must be sorted
  * 代码: 先创建返回的结果数组
  * code: first create a result array
  * 将给定数组排序
  * sort the given array in order
  * 开始遍历数组,第一个指针从头开始
- * iterate over the array and the first pointer starts from the index 0
+ * iterate over the array, with the first pointer starting from index 0
  * 第二,三个指针遍历其余部分,相对而行
  * the second and third pointers iterate over the remaining elements by moving towards each other
  * 如果和为0,则将三元组加入结果数组
- * if the total equals 0, we'll add the triplets to the result array
+ * if the total equals 0, we'll add the triplet to the result array
  * 否则移动对应指针
  * otherwise move the pointers based on sum
  * 去除所有重复结果
- * avoid the duplicate results
+ * skip the duplicate results
  * 这就是全部代码
  * so this is the complete code
  * 看一下结果
