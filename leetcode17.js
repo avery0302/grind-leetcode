@@ -31,16 +31,28 @@ var letterCombinations = function (digits) {
 };
 
 /**
- * 力扣17 电话号码的字母组合
+ * 力扣第17题 电话号码的字母组合
+ * leetcode problem 17: Letter Combinations of a Phone Number
  * 思路: 本题提供了数字到字母的一对多映射,给定一串数字,要找到所有可能的字母映射
+ * approach: this problem provides a mapping from digits to letters, requires all possible letter combinations from the given string
  * 由于数字长度最大为4,所以首先想到四重循环逐层拼接,能够覆盖所有情况
+ * because the longest length of the string is 4, so the first idea is to append letters from four nested loops, this implication can cover all possible cases
  * 为了精简代码,四重循环可以用递归来代替
+ * to simplify the code, we can use recursive function to replace four nested loops
  * 代码: 先初始化一个结果数组
+ * code: first initialize a result array
  * 参考图片写出数字到字母的映射
+ * create the mapping from digits to letters according to the picture
  * 然后构建递归的基本结构
+ * then build the basic structure of recursive function
  * 增加递归的分支
+ * add the recursive cases' branches
  * 最后加上递归的终止条件
+ * finally add the termination condition of the recursive function
  * 所以这就是全部代码
+ * so this is the complete code
  * 看一下结果
+ * take a look at the result
  * 完成
+ * done
  */
