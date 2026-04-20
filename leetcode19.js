@@ -26,7 +26,7 @@ var removeNthFromEnd = function (head, n) {
 };
 
 /**
- * 力扣19题: 删除链表的倒数第N个结点
+ * 力扣第19题: 删除链表的倒数第N个结点
  * leetcode problem 19: Remove Nth Node From End of List
  * 思路: 本题要求只遍历一次,删除链表的倒数第n个节点
  * approach: this problem requires removing the nth node from the end of the list by once iteration
