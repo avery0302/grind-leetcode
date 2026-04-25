@@ -10,28 +10,26 @@
  * @return {ListNode}
  */
 var mergeKLists = function (lists) {
-    let lists2 = []
+    let temp = []
     if (lists.length === 0) {
         return null
     }
-
     while (lists.length > 1) {
         for (let i = 0; i < lists.length; i += 2) {
             let l1 = lists[i]
             let l2 = i + 1 < lists.length ? lists[i + 1] : null
             let sum = merge2Lists(l1, l2)
-            lists2.push(sum)
+            temp.push(sum)
         }
-        lists = lists2
-        lists2 = []
+        lists = temp
+        temp = []
     }
-
-    return lists[lists.length - 1]
+    return lists[0]
 };
 
 function merge2Lists(l1, l2) {
-    let node = new ListNode()
-    let cur = node
+    let dummy = new ListNode()
+    let cur = dummy
     while (l1 && l2) {
         if (l1.val < l2.val) {
             cur.next = l1
@@ -43,5 +41,5 @@ function merge2Lists(l1, l2) {
         cur = cur.next
     }
     cur.next = l1 || l2
-    return node.next
+    return dummy.next
 }
