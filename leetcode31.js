@@ -31,5 +31,4 @@ var nextPermutation = function (nums) {
         j++
         k--
     }
-    return nums
 };
