@@ -9,12 +9,12 @@ var longestValidParentheses = function (s) {
     for (let i = 0; i < len; i++) {
         if (s[i] === '(') {
             stack.push(i)
-        } else if (stack.length === 1 || s[stack[stack.length - 1]] === ')') {
-            stack.push(i)
-        } else {
+        } else if (stack.length !== 0 && s[stack[stack.length - 1]] === '(') {
             stack.pop()
             max = Math.max(max, i - stack[stack.length - 1])
+        } else {
+            stack.push(i)
         }
     }
     return max
-}
+};
