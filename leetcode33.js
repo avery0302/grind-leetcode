@@ -7,14 +7,14 @@ var search = function (nums, target) {
     let left = 0
     let right = nums.length - 1
     let mid = -1
+    let m = 0
     let l = 0
     let r = 0
-    let m = 0
     while (left <= right) {
         mid = Math.floor((left + right) / 2)
+        m = nums[mid]
         l = nums[left]
         r = nums[right]
-        m = nums[mid]
         if (m === target) {
             return mid
         } else if (l <= m) {
