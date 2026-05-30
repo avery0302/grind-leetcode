@@ -4,30 +4,30 @@
  * @return {number}
  */
 var search = function (nums, target) {
-    let leftIdx = 0
-    let rightIdx = nums.length - 1
-    let midIdx = -1
     let left = 0
-    let right = 0
-    let mid = 0
-    while (leftIdx <= rightIdx) {
-        midIdx = Math.floor((leftIdx + rightIdx) / 2)
-        left = nums[leftIdx]
-        right = nums[rightIdx]
-        mid = nums[midIdx]
-        if (mid === target) {
-            return midIdx
-        } else if (left <= mid) {
-            if (target >= left && target < mid) {
-                rightIdx = midIdx - 1
+    let right = nums.length - 1
+    let mid = -1
+    let l = 0
+    let r = 0
+    let m = 0
+    while (left <= right) {
+        mid = Math.floor((left + right) / 2)
+        l = nums[left]
+        r = nums[right]
+        m = nums[mid]
+        if (m === target) {
+            return mid
+        } else if (l <= m) {
+            if (target >= l && target < m) {
+                right = mid - 1
             } else {
-                leftIdx = midIdx + 1
+                left = mid + 1
             }
         } else {
-            if (target > mid && target <= right) {
-                leftIdx = midIdx + 1
+            if (target > m && target <= r) {
+                left = mid + 1
             } else {
-                rightIdx = midIdx - 1
+                right = mid - 1
             }
         }
     }
