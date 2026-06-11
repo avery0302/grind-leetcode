@@ -4,9 +4,12 @@
  * @return {number[][]}
  */
 var combinationSum = function (candidates, target) {
-    candidates.sort((a, b) => a - b)
     let res = []
-    function addCandidate(start, cur, sum) {
+    candidates.sort((a, b) => a - b)
+    function addCandidate(cur, sum, start) {
+        if (sum > target) {
+            return
+        }
         if (sum === target) {
             res.push(cur)
             return
@@ -16,9 +19,9 @@ var combinationSum = function (candidates, target) {
             if (sum + n > target) {
                 break
             }
-            addCandidate(i, [...cur, n], sum + n)
+            addCandidate([...cur, n], sum + n, i)
         }
     }
-    addCandidate(0, [], 0)
+    addCandidate([], 0, 0)
     return res
 };
